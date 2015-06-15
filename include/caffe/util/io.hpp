@@ -7,8 +7,11 @@
 
 
 #include "google/protobuf/message.h"
+
+#ifdef HDF5
 #include "hdf5.h"
 #include "hdf5_hl.h"
+#endif // HDF5
 
 #include "caffe/blob.hpp"
 #include "caffe/common.hpp"
@@ -140,6 +143,8 @@ inline void string_split(vector<string>* tokens, const string& str,
     pos = str.find_first_of(delimiters, lastPos);
   }
 }
+  
+#ifdef HDF5
 
 template <typename Dtype>
 void hdf5_load_nd_dataset_helper(
@@ -154,6 +159,8 @@ void hdf5_load_nd_dataset(
 template <typename Dtype>
 void hdf5_save_nd_dataset(
     const hid_t file_id, const string& dataset_name, const Blob<Dtype>& blob);
+
+#endif // HDF5
 
 }  // namespace caffe
 
