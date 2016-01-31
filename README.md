@@ -1,3 +1,9 @@
+
+**I'm no longer maintaining this fork**
+
+Feel free to use it as a starting point but you are on your own. I've since switched to [TensorFlow](https://www.tensorflow.org) and [BrainCore](https://github.com/aleph7/braincore).
+
+---
 # Caffe
 
 Caffe is a deep learning framework made with expression, speed, and modularity in mind.
