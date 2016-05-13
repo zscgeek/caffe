@@ -5,6 +5,8 @@
 #include <string>
 #include <vector>
 
+#ifdef LMDB
+
 #include "lmdb.h"
 
 #include "caffe/util/db.hpp"
@@ -92,5 +94,6 @@ class LMDB : public DB {
 }  // namespace db
 }  // namespace caffe
 
+#endif  // LMDB
 #endif  // CAFFE_UTIL_DB_LMDB_HPP
 #endif  // USE_LMDB

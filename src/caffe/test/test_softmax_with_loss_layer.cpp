@@ -1,18 +1,20 @@
 #include <cmath>
+#include <cstdlib>
+#include <cstring>
+#include <memory>
 #include <vector>
 
-#include "boost/scoped_ptr.hpp"
 #include "gtest/gtest.h"
 
 #include "caffe/blob.hpp"
 #include "caffe/common.hpp"
 #include "caffe/filler.hpp"
-#include "caffe/layers/softmax_loss_layer.hpp"
+#include "caffe/vision_layers.hpp"
 
 #include "caffe/test/test_caffe_main.hpp"
 #include "caffe/test/test_gradient_check_util.hpp"
 
-using boost::scoped_ptr;
+using std::unique_ptr;
 
 namespace caffe {
 
@@ -66,7 +68,7 @@ TYPED_TEST(SoftmaxWithLossLayerTest, TestForwardIgnoreLabel) {
   LayerParameter layer_param;
   layer_param.mutable_loss_param()->set_normalize(false);
   // First, compute the loss with all labels
-  scoped_ptr<SoftmaxWithLossLayer<Dtype> > layer(
+  unique_ptr<SoftmaxWithLossLayer<Dtype> > layer(
       new SoftmaxWithLossLayer<Dtype>(layer_param));
   layer->SetUp(this->blob_bottom_vec_, this->blob_top_vec_);
   layer->Forward(this->blob_bottom_vec_, this->blob_top_vec_);

@@ -5,6 +5,7 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #endif  // USE_OPENCV
 #include <algorithm>
+#include <iomanip>
 #include <iosfwd>
 #include <memory>
 #include <string>

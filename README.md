@@ -1,3 +1,9 @@
+
+**I'm no longer maintaining this fork**
+
+Feel free to use it as a starting point but you are on your own. I've since switched to [TensorFlow](https://www.tensorflow.org) and [BrainCore](https://github.com/aleph7/braincore).
+
+---
 # Caffe
 
 [![Build Status](https://travis-ci.org/BVLC/caffe.svg?branch=master)](https://travis-ci.org/BVLC/caffe)
@@ -21,6 +27,17 @@ Please join the [caffe-users group](https://groups.google.com/forum/#!forum/caff
 Framework development discussions and thorough bug reports are collected on [Issues](https://github.com/BVLC/caffe/issues).
 
 Happy brewing!
+
+
+## iOS
+
+This fork was modified to be compiled for iOS and OSX using Xcode. Here are some of the changes:
+
+* Added an Xcode project
+* Removed support for HDF5 and LMDB, only LevelDB is supported
+* Removed support for GPU mode, only CPU mode is supported
+* The project has no dependencies, all necessary libraries are included and scripts are provided to compile the latest version of each of the dependencies with iOS and OSX support
+
 
 ## License and Citation
 
