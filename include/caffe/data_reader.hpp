@@ -10,6 +10,8 @@
 #include "caffe/util/blocking_queue.hpp"
 #include "caffe/util/db.hpp"
 
+#include "boost/weak_ptr.hpp"
+
 namespace caffe {
 
 /**

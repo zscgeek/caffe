@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4CD8186CE66A0AD46BD21DF2E9F43E65780546D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2DDF1D4E528EDA8D8E5AF503BA5680A30604BD70" : 0,
+    "9FA95DEE4EB174E673372E30E3D25C64477F8D05" : 0,
+    "4CD8186CE66A0AD46BD21DF2E9F43E65780546D2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "25EEEA31-C7CE-4153-9512-47A0C06CE937",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2DDF1D4E528EDA8D8E5AF503BA5680A30604BD70" : "caffe\/xcconfigs\/",
+    "9FA95DEE4EB174E673372E30E3D25C64477F8D05" : "caffe\/ios\/ofxiOSBoost\/",
+    "4CD8186CE66A0AD46BD21DF2E9F43E65780546D2" : "caffe\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Caffe",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Caffe.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mrackwitz\/xcconfigs.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2DDF1D4E528EDA8D8E5AF503BA5680A30604BD70"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/zscgeek\/caffe.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4CD8186CE66A0AD46BD21DF2E9F43E65780546D2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/danoli3\/ofxiOSBoost.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9FA95DEE4EB174E673372E30E3D25C64477F8D05"
+    }
+  ]
+}

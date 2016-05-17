@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		306142611CE68C8F00B0BFA8 /* HDF5Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306142601CE68C8F00B0BFA8 /* HDF5Kit.framework */; };
+		306142631CEB60BA00B0BFA8 /* libboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 306142621CEB60BA00B0BFA8 /* libboost.a */; };
 		615031C91B27BD1400496218 /* caffe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61502FB41B27B78C00496218 /* caffe.cpp */; };
 		61DF54F91B334875000D5264 /* gflags.cc in Sources */ = {isa = PBXBuildFile; fileRef = 616E873D1B321296009CE299 /* gflags.cc */; };
 		61DF54FA1B334875000D5264 /* gflags_completions.cc in Sources */ = {isa = PBXBuildFile; fileRef = 616E873E1B321296009CE299 /* gflags_completions.cc */; };
@@ -142,6 +144,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		306142601CE68C8F00B0BFA8 /* HDF5Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HDF5Kit.framework; path = RJLibs/HDF5Kit.framework; sourceTree = "<group>"; };
+		306142621CEB60BA00B0BFA8 /* libboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost.a; path = ios/ofxiOSBoost/libs/boost/ios/libboost.a; sourceTree = "<group>"; };
 		61502EFF1B27B78B00496218 /* blob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = blob.cpp; sourceTree = "<group>"; };
 		61502F011B27B78B00496218 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
 		61502F021B27B78B00496218 /* data_transformer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = data_transformer.cpp; sourceTree = "<group>"; };
@@ -516,7 +520,9 @@
 				61DF55741B334934000D5264 /* libleveldb.a in Frameworks */,
 				61DF55751B334934000D5264 /* libprotobuf.a in Frameworks */,
 				61DF55761B334934000D5264 /* libprotoc.a in Frameworks */,
+				306142611CE68C8F00B0BFA8 /* HDF5Kit.framework in Frameworks */,
 				61DF556E1B33492D000D5264 /* Accelerate.framework in Frameworks */,
+				306142631CEB60BA00B0BFA8 /* libboost.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +532,7 @@
 		61502EC11B27B76200496218 = {
 			isa = PBXGroup;
 			children = (
+				306142621CEB60BA00B0BFA8 /* libboost.a */,
 				615030CE1B27B78C00496218 /* README.md */,
 				615030921B27B78C00496218 /* INSTALL.md */,
 				61502FE81B27B78C00496218 /* CONTRIBUTORS.md */,
@@ -539,6 +546,7 @@
 				615030171B27B78C00496218 /* examples */,
 				615030B51B27B78C00496218 /* models */,
 				61502ECB1B27B76200496218 /* Products */,
+				306142601CE68C8F00B0BFA8 /* HDF5Kit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1450,8 +1458,14 @@
 					"$(inherited)",
 					"${PROJECT_DIR}/include",
 					"${PROJECT_DIR}/osx/include",
+					"\"$(SRCROOT)/../../aleph7/HDF5Kit/dist/src\"",
+					"\"$(SRCROOT)/ios/ofxiOSBoost/libs/boost/include\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lib",
+					"\"$(SRCROOT)/ios/ofxiOSBoost/libs/boost/ios\"",
+					"\"$(SRCROOT)/ios/lib\"",
+				);
 				LOCAL_ROOT = "$(HOME)/../..";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1499,8 +1513,14 @@
 					"$(inherited)",
 					"${PROJECT_DIR}/include",
 					"${PROJECT_DIR}/osx/include",
+					"\"$(SRCROOT)/../../aleph7/HDF5Kit/dist/src\"",
+					"\"$(SRCROOT)/ios/ofxiOSBoost/libs/boost/include\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/lib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/lib",
+					"\"$(SRCROOT)/ios/ofxiOSBoost/libs/boost/ios\"",
+					"\"$(SRCROOT)/ios/lib\"",
+				);
 				LOCAL_ROOT = "$(HOME)/../..";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1531,7 +1551,15 @@
 			baseConfigurationReference = 61DF49601B30DC9C0079E197 /* UniversalFramework_Framework.xcconfig */;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RJLibs",
+				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios/ofxiOSBoost/libs/boost/ios",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1541,6 +1569,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61DF49601B30DC9C0079E197 /* UniversalFramework_Framework.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RJLibs",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ios/ofxiOSBoost/libs/boost/ios",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
